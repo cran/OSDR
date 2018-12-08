@@ -4,7 +4,7 @@
 From list of feasible assignments to cost matrix.
 }
 \description{
-Transforms the list of subsets of suitable applicants into the corresponding cost matrix. 
+Transforms the list of suitable applicants into the equivalent cost matrix. 
 }
 \usage{
 matlist(x)
@@ -15,7 +15,7 @@ An ordered list of applicants for a set of jobs. The \eqn{i^{th}} element of the
 }
 }
 \details{
-In statistical matching problems the input is usually the cost matrix while in assignment problems is usually the list of assignable elements. Functions \code{matlist} and \code{listmat} go back and forth these two representations of the input.
+In statistical matching problems the input is usually the cost matrix while in assignment problems is the list of assignable elements. Functions \code{matlist} and \code{listmat} go back and forth these two representations of the input.
 }
 \value{
 The cost matrix of the assignment problem. The \eqn{(i,j)} entry of the matrix is zero if the \eqn{j^{th}} applicant is assignable to the \eqn{i^{th}} job and \eqn{\infty} otherwise. Equivalently, the \eqn{(i,j)} entry of the matrix is zero if the \eqn{j^{th}} control unit can be matched to the \eqn{i^{th}} treated unit and \eqn{\infty} otherwise.

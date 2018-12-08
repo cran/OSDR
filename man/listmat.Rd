@@ -1,17 +1,17 @@
 \name{listmat}
 \alias{listmat}
 \title{
-From cost matrix to the list of feasible assignments. 
+From cost matrix to list of feasible assignments. 
 }
 \description{
-Transforms the cost matrix of the assignment problem in the list of suitable applicants for each job. 
+Transforms the cost matrix of the assignment problem in the corresponding list of suitable applicants for each job. 
 }
 \usage{
 listmat(x)
 }
 \arguments{
   \item{x}{
-A cost matrix where entry \eqn{(i,j)} gives the cost of assigning job \emph{i} to applicant \emph{j}.  
+A cost matrix where entry \eqn{(i,j)} is the cost of assigning job \emph{i} to applicant \emph{j}.  
 }
 }
 \details{

@@ -25,10 +25,10 @@ Contains executives data for an italian firm operating in the energy sector (yea
 }
 \details{
 	  \describe{
-	\item{\code{position}}{ is coded: 4=top manager, 3=medium/first line manager, 2 =supervisor}
-	\item{\code{sex}}{ is coded: 0=M, 1=F}
-	\item{\code{education}}{is coded: Post-graduate=5, Graduate=4, High school=3}
-	\item{\code{contract type}}{ is coded: fixed term=4; permanent=3}
+	\item{\code{position}}{ is coded: 4 = top manager, 3 = medium/first line manager, 2 = supervisor}
+	\item{\code{sex}}{ is coded: 0 = M, 1 = F}
+	\item{\code{education}}{is coded: Post-graduate = 5, Graduate = 4, High school = 3}
+	\item{\code{contract type}}{ is coded: fixed term = 4; permanent = 3}
 	\item{\code{seniority}}{ is measured by number of years in the current position}
 }
 	
@@ -40,7 +40,7 @@ Contains executives data for an italian firm operating in the energy sector (yea
 % }
 \references{
 %%  ~~ possibly secondary sources and usages ~~
-Cannas, M. Order optimal matching for statistical application: a gender gap case study (available on \emph{arXiv}).
+Cannas, M. Order optimal matching for statistical application: a gender gap case study (soon available on \emph{arXiv}).
 }
 \examples{
 # load executive data
@@ -53,13 +53,18 @@ table(exdata$position,exdata$sex)
 # There are more women and more in apical position. 
 
 # A complete matching is not possible for several choices of the caliper.
-# since gap differences tend to be higher for higher ranks
-# we give higher matching priority to women in higher position.
-# In these cases it is possible to ise OSDR to find a minimum cost matching 
-# performing matching by decreasing hierarchical position. 
+# Gap differences tend to be higher for higher ranks
 
 # e.g. Lynn and Thompson(1997), Above the glass ceiling? A comparison of
-# matches Samples of Men and Women Executives. J. of Appl. Psych. 82(3)
+# matched Samples of Men and Women Executives. J. of Appl. Psych. 82(3)
+
+# so we would give higher matching priority to women in higher position.
+# We can use OSDR to find a minimum cost matching 
+# performing matching by decreasing hierarchical position. 
+
 # An illustrative example is shown in the help page of the OSDR function.
+
+
+
 }
 \keyword{datasets, matched pair comparison, gender gap, observational studies}

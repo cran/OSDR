@@ -1,8 +1,8 @@
 Package: OSDR
 Type: Package
 Title: Finds an Optimal System of Distinct Representatives
-Version: 1.1
-Date: 2018-09-19
+Version: 1.1.2
+Date: 2018-12-08
 Authors@R: person("Massimo", "Cannas", role = c("aut", "cre"),
                      email = "massimo.cannas@unica.it")
 Author: Massimo Cannas [aut, cre]
@@ -11,6 +11,6 @@ Description: Provides routines for finding an Optimal System of Distinct Represe
 Suggests: optrees, optmatch
 License: GPL-2
 NeedsCompilation: no
-Packaged: 2018-09-30 21:59:18 UTC; massimo
+Packaged: 2018-12-08 17:07:19 UTC; massimo
 Repository: CRAN
-Date/Publication: 2018-10-08 12:40:14 UTC
+Date/Publication: 2018-12-08 17:50:03 UTC

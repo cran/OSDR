@@ -4,22 +4,28 @@
 Finds an Optimal System of Distinct Representatives for a family of subsets. 
 }
 \description{
-The function finds an Optimal Set of Distinct Representatives (OSDR) from the ordered family of feasible representatives. Optimality is order-wise in the sense specified by Gale: any other SDR either is shorter or its elements are partly chosen from less important sets (see details). 
+The function finds an Optimal Set of Distinct Representatives (OSDR) from an ordered family of subsets. Optimality is order-wise in the sense specified by Gale: any other SDR either is shorter or its elements are partly chosen from less important sets (see details). 
 }
 \usage{
 OSDR(M)
 }
 \arguments{
   \item{M}{
-A list specifying the feasible applicants (representatives) for each set. The list is assumed \emph{ordered} by decreasing matching priority. 
+An ordered family of subsets. In assignment problems the family is the list specifying the feasible applicants for each job. In matching problems a list specifying the controls matchable with each treated unit. The list is assumed \emph{ordered} by decreasing assignment/matching priority. 
 }
 }
 \details{
-Consider a set of jobs and screen the jobs in decreasing order of priority until finding for each job the subset of suitable applicants. It was shown by D.Gale that there exists an \emph{optimally assignable} subset of the jobs in the sense that if \eqn{\{a_1, \cdots a_k\}} is optimal and \eqn{\{b_1, \cdots b_h\}} is another assignable set then either \eqn{k > h} or there exists \eqn{i} such that \eqn{a_i < b_i} (the latter meaning that job \eqn{a_i} has priority over job \eqn{b_i}). From a graph perspective, OSDR is a \emph{order wise} maximum size matching of the bipartite graph with vertex set \eqn{J\cup A} where \eqn{J} is the set of jobs and \eqn{A} is the set of applicants. In statistical matching problems the sets \eqn{J} and \eqn{A} are replaced by the sets of treated and control units and it is usually required to find the minimum covariate distance matching of treated versus control units. When a complete matching does not exist it can be convenient to find an order optimal matching or a minimum cost matching on the optimally matchable subset \code{OSDR}. 
+Consider a set of jobs and a set of suitable applicants for each job. It was shown by D.Gale that there exists an \emph{optimally assignable} subset of the jobs in the sense that if \eqn{\{a_1, \cdots a_k\}} is optimal and \eqn{\{b_1, \cdots b_h\}} is another assignable set of jobs then 
+
+either \eqn{k > h} or there exists \eqn{i} such that \eqn{a_i < b_i} 
+
+(where \eqn{a_i < b_i} means that job \eqn{a_i} has priority over job \eqn{b_i}). From a graph perspective, if \eqn{J} is the set of jobs and \eqn{A} is the set of applicants the OSDR is an \emph{order wise} maximum size matching of the bipartite graph with vertex set \eqn{J\cup A}. Function \code{OSDR} finds the optimal matching using an algorithmic proof of Hall's theorem due to logician D.J. Shoesmith.
 }
 \value{
+A list containing three elements: the OSDR, the index of optimally assignable subsets and the index of optimally unassignable subsets. When the latter is not empty \code{M} does not meet Hall's condition and a complete SDR is not possible.
 
-The OSDR, an ordered vector containing in position \emph{i} the representative of the \eqn{i^{th}} set. A zero indicates impossibility of finding a representative for that set (i.e. Hall's condition is not met and thus a complete matching is not possible).
+%A list containing three elements: the optimally assignable subset of jobs, the optimal assignment (i.e. the OSDR) and a list of unmatched jobs. 
+%the osdr, i.e. an ordered vector containing in position \emph{i} the representative of the \eqn{i^{th}} set. A zero indicates impossibility of finding a representative for that set (i.e. Hall's condition is not met and thus a complete matching is not possible).
 }
 \references{
 Gale, D. (1968) Optimal matching in an ordered set: an application of matroid theory. \emph{Journal of Combinatorial Theory 4: 176-180}.
@@ -31,8 +37,7 @@ Anderson, I. (1989) A first course in Combinatorial Mathematics. \emph{Oxford Un
 \packageMaintainer{OSDR}
 }
 \note{
-Function \code{OSDR} finds the optimal matching using an algorithmic 
-proof of Hall's theorem due to logician D.J. Shoesmith.
+In statistical matching problems the sets \eqn{J} and \eqn{A} are the sets of treated and control units and it is usually required to find the minimum covariate distance matching of treated versus control units. When a complete matching does not exist it can be convenient to find an order optimal matching or a minimum cost matching on the optimally matchable subset \code{OSDR} (see the examples). 
 }
 
 \seealso{
