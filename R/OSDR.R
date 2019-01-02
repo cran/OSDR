@@ -7,7 +7,7 @@ n<-length(M)
 #   comment: fill OSDR greedily until possible 
  for (j in 1:n){
 if  (length(setdiff(M[[j]],SDR))!=0)
-    SDR[j]<-setdiff(M[[j]],SDR)[1] else{ 
+    SDR[j]<-setdiff(M[[j]],SDR)[1] else{  cat("stop at ", j,"... \n");
 # initialize lists for searching unfilled Tj
 A<-B<-list()
 comblist<-M[j]; B[1]<-unlist(comblist)[1]; A[1]<- match(B[1],SDR)
@@ -27,15 +27,15 @@ comblist<-M[j]; B[1]<-unlist(comblist)[1]; A[1]<- match(B[1],SDR)
          free   <-SDR[k]       #free SDR[k]..
          SDR[k] <-unlist(B[i+1]) # ...put B[i+1] in place 
 
-         if((free%in%M[[j]])) {SDR[j]<-free; cat("SDR[",j,"]=",SDR[j])
+         if((free%in%M[[j]])) {SDR[j]<-free; cat("backward until step ",k, "\n")
          	;break} else {
-    	B[i+1]<-free ; A<-A[-k]; cat("B_",i+1)
+    	B[i+1]<-free ; A<-A[-k];# cat("B_",i+1)
     	}
 
           }#close while              
                                              }#close else
                                      }#close for
-                                     results<-list(which(SDR!=0), SDR[SDR!=0], which(SDR==0))
-                                     names(results)<-c("matching","OSDR","unmatched")
+                                     results<-list(SDR, which(SDR!=0), which(SDR==0))
+                                     names(results)<-c("OSDR","matched","unmatched")
 return(results) 
 }
