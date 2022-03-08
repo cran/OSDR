@@ -38,10 +38,6 @@ Contains executives data for an italian firm operating in the energy sector (yea
 % %%  ~~ reference to a publication or URL from which the data were obtained ~~
 
 % }
-\references{
-%%  ~~ possibly secondary sources and usages ~~
-Cannas, M. Order optimal matching for statistical application: a gender gap case study (soon available on \emph{arXiv}).
-}
 \examples{
 # load executive data
 data(exdata)
@@ -61,10 +57,5 @@ table(exdata$position,exdata$sex)
 # so we would give higher matching priority to women in higher position.
 # We can use OSDR to find a minimum cost matching 
 # performing matching by decreasing hierarchical position. 
-
-# An illustrative example is shown in the help page of the OSDR function.
-
-
-
 }
-\keyword{datasets, matched pair comparison, gender gap, observational studies}
+\keyword{ordered assignment problem}

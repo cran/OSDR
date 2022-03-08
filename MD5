@@ -1,12 +1,12 @@
-75437251378aed832f977db12dca6f86 *DESCRIPTION
+dd7a60aa03d27e4f4b1c53eb2f67de62 *DESCRIPTION
 8b54e5a89fbda3af5e077053d40bec76 *NAMESPACE
 77f3288aff79e0a014d319e078d67696 *R/OSDR.R
 691da86ad3971627addacd2ccd18f212 *R/listmat.R
 2c4abfdde9c75d0128617b45eea64a80 *R/matlist.R
-a8dd1330af1aebdd72d9335de2ee1a0f *build/partial.rdb
+d4dc12f265567cc6cbee6ddff87d76e4 *build/partial.rdb
 6a4945dbc61386b90f6dd767963ac9e6 *data/exdata.rda
-6a3d6c41f4895526cd5c802f6d33571f *man/OSDR-package.Rd
-1109ac37c3acfe5b8888374da1f2a752 *man/OSDR.Rd
-0c5c1c6205562e4c1cc00b801937126e *man/exdata.Rd
+069f3d5ff76cb042b40cd9d868054bf0 *man/OSDR-package.Rd
+34932ec510db9ee2be7930d18493956f *man/OSDR.Rd
+8402bf418dae377edbd25cd41c846ba3 *man/exdata.Rd
 eede070ada68c9e81b6f7200250e297e *man/listmat.Rd
 16d2540a2306483583c8c930393e189a *man/matlist.Rd

@@ -26,14 +26,9 @@ Gale, D. (1968) Optimal matching in an ordered set: an application of matroid th
 Anderson, I. (1989) A first course in Combinatorial Mathematics. \emph{Oxford University Press}.
 
 Rosenbaum, P. R. (1989). Optimal matching for observational studies. \emph{Journal of the American Statistical Association 84(408): pp. 1024-1032}. 
-
-Cannas, M. Order optimal matching for statistical application: a gender gap case study (soon available on \emph{arXiv}).
 }
 
-\keyword{ ordered assignment problem, order optimal matching, observational studies. }
-\seealso{
-Routines for classic combinatorial optimization problems are available on R via the \pkg{\link[optrees]{optrees}} package and the \pkg{\link[maxmatching]{maxmatching}} package. A package for statistically oriented optimal matching is the \pkg{\link[optmatch]{optmatch}} package which can be used in observational studies to find a minimum covariate distance matching of control to treated units prior to outcome analysis (Rosenbaum).
-}
+\keyword{ ordered assignment problem}
 \examples{
 #See OSDR help for the examples. 
 }
